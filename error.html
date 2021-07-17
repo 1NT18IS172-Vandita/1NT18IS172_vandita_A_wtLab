@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <center><H1>error handling</H1></center>
+    <body style="background-color: pink"></body>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+<center><p>Please input a number between 11 and 17:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Click here</button>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try {
+    if(x == "") throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 11) throw "low";
+    if(x > 17) throw "high";
+  }
+
+  catch(err) {
+    message.innerHTML = "lets see- " + err;
+  }
+}
+
+</script>
+
+</body>
+</center>
+</html>
+<html>
+   <head>
+      
+      <script type = "text/javascript">
+         <!--
+            function myFunc() {
+               var a = 100;
+               var b = 0;
+               
+               try {
+                  if ( b == 0 ) {
+                     throw( "Divide by zero error." ); 
+                  } else {
+                     var c = a / b;
+                  }
+               }
+               catch ( e ) {
+                  alert("Error: " + e );
+               }
+            }
+         //-->
+      </script>
+      
+   </head>
+   <body>
+      <p>Click the following to see the result:</p>
+      
+      <form>
+         <input type = "button" value = "Click Me" onclick = "myFunc();" />
+      </form>
+      
+   </body>
+</html>
